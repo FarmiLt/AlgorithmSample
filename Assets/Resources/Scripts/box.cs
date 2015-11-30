@@ -5,10 +5,10 @@ public class box : MonoBehaviour {
 
     private BezierCurve m_movement;
 
-
 	// Use this for initialization
 	void Start () {
-        m_movement = this.GetComponent<BezierCurve>();
+        m_movement = this.transform.FindChild("BezierCurve").GetComponent<BezierCurve>();
+        m_movement.Initialize();
 	}
 	
 	// Update is called once per frame
